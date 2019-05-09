@@ -33,6 +33,7 @@ public class SignInDAO extends DAO{
             pstm.setString(1, pw);
             pstm.setString(2,usn);
             ResultSet rs=pstm.executeQuery();
+            
             if(rs.next()){
                 mem=new Member();
                 mem.setFullName(rs.getString(2));
